@@ -7,7 +7,7 @@
 //
 #import "NetServiceManager.h"
 #import "ViewController.h"
-
+#import <SVProgressHUD.h>
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *dataDic;
 
@@ -18,8 +18,11 @@
     [[NetServiceManager shareManager] recommendedProductInfo:@"2" delegate:self success:^(id responseObject) {
         self.dataDic.text = [self jsonToString:responseObject];
     } failure:^(NSError *error) {
-        
+        [SVProgressHUD showWithStatus:@"error"];
     }];
+}
+- (IBAction)clear:(id)sender {
+    self.dataDic.text = @"";
 }
 
 - (void)viewDidLoad {
