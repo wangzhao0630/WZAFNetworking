@@ -169,15 +169,6 @@
     } failure:^(NSError *error) {
         failure(error);
     }];
-//    [_httpRequest xsPostPath:kRecommend delegate:delegate params:param success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//        
-//        [self catchNetResWithResInfo:responseObject success:success error:failure delegate:delegate path:kRecommend];
-//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//        
-//        failure(error);
-//        [CMMUtility hideWaitingAlertView];
-//        [self showNoNetworkErrorPrompt:error];
-//    }];
 }
 
 
