@@ -159,6 +159,7 @@
     assert(platform);
     
     //[CMMUtility showWaitingAlertView];
+    //[CMMUtility showWaitingAlertView];
     
     NSMutableDictionary *param = [self buildParametersDic];
     //产品通道Id，钱宝宝的productChannelId
